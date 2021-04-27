@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;background-size: 100% 100%;background-repeat: no-repeat;user-select: none;}
+        .wrapper{width: 300px;height: 250px;background-image: url("assets/bg.jpg");background-size: 300px 250px;position: relative;cursor: grab;overflow: hidden;}
+        .absolute{position: absolute;}
+        .patch_box{height: 250px;width: 300px;top: 0;left: 0;transition: all 1s ease-in-out;}
+        .imgBx{position: relative;width: 300px;height: 250px;}
+        .imgBx img:nth-child(1){position: absolute;left: 0;top: 0;width: 300px;height: 250px;transform-origin: left;}
+        .imgBx img:nth-child(2){position: absolute;left: 300px;top: 0;width: 500px;height: 625px;transform-origin: left}
+        .blur1{
+            animation: blur1 4s ease 0s infinite;
+           -webkit-animation: blur1 4s ease 0s infinite;-moz-animation: blur1 4s ease 0s infinite;
+        }
+        .blur2{
+            animation: blur2 4s infinite;
+           -webkit-animation: blur2 4s infinite;-moz-animation: blur2 4s infinite;
+        }
+        @keyframes blur1 {
+        0%,
+        90% {
+            -webkit-filter: blur(0px);
+            -moz-filter: blur(0px);
+            -o-filter: blur(0px);
+            -ms-filter: blur(0px);
+        }
+        50% {
+            opacity: 0;
+            transform: translateX(50px);
+            -webkit-filter: blur(50px);
+            -moz-filter: blur(50px);
+            -o-filter: blur(50px);
+            -ms-filter: blur(50px);
+            }
+        }
+
+        /* filter: blur(3px);
+        -webkit-filter: blur(3px);
+        -moz-filter: blur(3px);
+        -o-filter: blur(3px);
+        -ms-filter: blur(3px);
+        filter: url(blur.svg#blur);
+        filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3'); */
+
+        @keyframes blur2 {
+        0%,
+        90% {
+            /* opacity: .2; */
+            /* transform: translateX(50px) scaleX(0); */
+            opacity: 1;
+            /* -webkit-filter: blur(0px);
+            -moz-filter: blur(0px);
+            -o-filter: blur(0px);
+            -ms-filter: blur(0px); */
+        }
+        50% {
+            opacity: 1;
+            transform: translateX(-200px) scaleX(1);
+            /* -webkit-filter: blur(50px);
+            -moz-filter: blur(50px);
+            -o-filter: blur(50px);
+            -ms-filter: blur(50px); */
+            }
+        }
+        
+/* 
+        filter: blur(3px);
+        -webkit-filter: blur(3px);
+        -moz-filter: blur(3px);
+        -o-filter: blur(3px);
+        -ms-filter: blur(3px);
+        filter: url(blur.svg#blur);
+        filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3'); */
+
+    </style>
+</head>
+<body>
+    <div class="imgBx">
+        <img class="blur1" src="thanos-i-am-inevitable-rb.jpg">
+        <img class="blur2" src="noise.png">
+    </div>
+    <script>
+        setInterval
+    </script>
+</body>
+</html>
